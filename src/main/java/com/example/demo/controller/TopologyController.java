@@ -57,7 +57,7 @@ public class TopologyController {
         return new ResponseEntity<>(mp, HttpStatus.OK);
     }
     @PostMapping("/Delete")
-    public ResponseEntity<?> getAllTopologies(@RequestParam String topologyID){
+    public ResponseEntity<?> deleteTopology(@RequestParam String topologyID){
         Map<String, String> mp = new HashMap<>();
         iTopologyService.deleteTopology(topologyID);
         mp.put("message","Topology deleted successfully");
